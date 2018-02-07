@@ -13,7 +13,7 @@ namespace Triplets_Basic
             //LINQ used to access Array elements, group them by any that appear in 3's and select & return the first element in the sequence. 
             var triplets = input.GroupBy(x => x).Where(y => y.Count() == 3).Select(z => z.First());
 
-            int answer = triplets.Any() ? 3 : 0;
+            int answer = Convert.ToInt32(triplets.Any());
 
             return answer;
         }
